@@ -1,4 +1,4 @@
-# Issues
+# Issue-Fetch
 
 Elixir CLI app to get issues from a github repo from the terminal into a pretty printed table.
 
