@@ -1,21 +1,7 @@
 # Issues
 
-**TODO: Add description**
+Elixir CLI app to get issues from a github repo from the terminal into a pretty printed table.
 
 ## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `issues` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:issues, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/issues](https://hexdocs.pm/issues).
+You must have Elixir and Erlang installed on your machine, then clone the repo and do a "mix run" in the root folder
 
