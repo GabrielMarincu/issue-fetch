@@ -1,12 +1,12 @@
 defmodule Issues.CLI do
   @default_count 4
-
+  import Issues.TableFormatter, only: [print_table_for_columns: 2]
   @moduledoc """
   Command line parsing and the dispatching to
   other module functions to generate a table
   of the last _n_ issues in a github project
   """
-  def run(argv) do
+  def main(argv) do
     argv
     |> parse_args
     |> process
@@ -44,7 +44,8 @@ defmodule Issues.CLI do
     Issues.GithubIssues.fetch(user, project)
     |> decode_response
     |> sort_into_ascending_order
-    |> Enum.take(count)
+    |> Enum.take(_count)
+    |> print_table_for_columns(["number", "created_at", "title"])
   end
 
   def sort_into_ascending_order(list_of_issues) do
